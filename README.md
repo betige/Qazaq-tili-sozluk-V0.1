@@ -10,6 +10,6 @@ Merhaba, ben Betige (İrem). Çağdaş Türk Lehçeleri ve Edebiyatı öğrencis
 
 ### 📜 Lisans 
 Copyright (c) 2026 Betige
-Bu proje GNU GPL v3.0 lisansı altında korunmaktadır.
+Bu proje GNU GPL v3.0 lisansı ile lisanslanmıştır.
 
 Geliştirmeye ve yeni kelimeler eklemeye devam edeceğim, şimdilik ilk versiyon bu şekilde!
