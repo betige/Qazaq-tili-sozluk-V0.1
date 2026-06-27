@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kazakça Sözlük</title>
+    
+    <style>
+        body {
+            background: linear-gradient(135deg, #910000 0%, #561913 100%); /* Senin asil kırmızı arka planın */
+            color: #F1D4D4; /* Genel yazılar yumuşak bir açık pembe/beyaz */
+            font-family: sans-serif; 
+            text-align: center; 
+            padding-top: 50px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: #C30000; /* Başlık bembeyaz parlasın */
+            margin-bottom: 20px;
+        }
+        input {
+            padding: 10px;
+            border-radius: 4px;
+            border: none;
+            margin-right: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #561913;
+            color: white;
+            border: 1px solid #C37878;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        /* AYAR OLDUĞUN O KELİME RENGİNİ BURADA BEMBEYAZ YAPTIK! */
+        #sonuc {
+            margin-top: 25px; 
+            font-size: 24px; 
+            font-weight: bold;
+            color: #EDCC38 !important; /* İnatçı kelimeler kesinlikle BEYAZ olacak */
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.5); /* Arkası karanlık olduğu için yazıya hafif gölge verip parlattık */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Kazakça Sözlük</h1>
+    <p>Aratmak istediğiniz kelimeyi girin:</p>
+    <input type="text" id="kelimeInput" placeholder="Kelime girin...">
+    <button onclick="sozlukteAra()">Ara</button>
+
+    <div id="sonuc"></div>
+
+    <script>
+        const sozluk = {
+            "ağabey": "Аға (ağa)",
+            "anne": "Ана (ana) ",
+            "ağaç": "Ағаш (ağaş)",
+            "avuç içi": "Алақан (alakqan)",
+            "ay" : "Ай (ay)",
+            "ayna" :"Айна (ayna)",
+            "ayak" : "Аяқ (ayaq)",
+            "ayakkabı" : "Аяқкиім (ayaqkiim)",
+            "balık" :"Балық (balıq)",
+            "bakmak" :"Бақыla (baxıla)" ,
+            "bel" :"Бел (bel/orta kısım)",
+            "birlik" :"Бірлік (birlik)",
+            "boya" :"Бояу (boyaw)",
+            "buhar" :"Бұхар (buhar)"
+        };
+
+        function sozlukteAra() {
+            var kelime = document.getElementById("kelimeInput").value.toLowerCase().trim();
+
+            if (sozluk[kelime] !== undefined) {
+                document.getElementById("sonuc").innerHTML = "Karşılığı: " + sozluk[kelime];
+            } else {
+                document.getElementById("sonuc").innerHTML = "Arattığınız kelime mevcut değil";
+            }
+        }
+    </script>
+
+</body>
+</html>
